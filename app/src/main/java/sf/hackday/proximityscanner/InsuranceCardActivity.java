@@ -3,10 +3,14 @@ package sf.hackday.proximityscanner;
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.widget.Toast;
+import android.widget.TextView;
+import android.nfc.Tag;
 
 /**
  * Created by aaron on 6/15/16.
@@ -15,6 +19,7 @@ import android.widget.Toast;
 public class InsuranceCardActivity extends Activity {
 
     private NfcAdapter adapter;
+    private SharedPreferences preferences;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -29,7 +34,9 @@ public class InsuranceCardActivity extends Activity {
             return;
         }
 
-        handleIntent(getIntent());
+        preferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        //handleIntent(getIntent());
     }
 
     @Override
@@ -63,6 +70,21 @@ public class InsuranceCardActivity extends Activity {
     }
 
     private void handleIntent(Intent intent) {
-        //TODO: Implement
+        String action = intent.getAction();
+
+        TextView policy = (TextView) findViewById(R.id.txtPolicy);
+
+        if(NfcAdapter.ACTION_TAG_DISCOVERED.equals(action)) {
+            String type = intent.getType();
+
+
+            Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
+
+
+
+            policy.setText(tag.getId().toString());
+        }
+
+
     }
 }
