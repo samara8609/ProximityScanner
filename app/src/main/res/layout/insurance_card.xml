@@ -42,7 +42,7 @@
             <TextView
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Customer Details: "
-                android:id="@+id/lblDetails"
+                android:id="@+id/lblCustomerDetails"
                 android:layout_column="0"
                 android:textColor="#ffffff" />
 
@@ -52,7 +52,7 @@
                 android:inputType="textPersonName"
                 android:text="Name"
                 android:ems="10"
-                android:id="@+id/editText"
+                android:id="@+id/txtName"
                 android:layout_column="1" />
         </TableRow>
 
@@ -63,7 +63,7 @@
             <EditText
                 android:inputType="textPostalAddress"
                 android:ems="10"
-                android:id="@+id/editText2"
+                android:id="@+id/txtAddress1"
                 android:layout_column="1"
                 android:text="123 W North St" />
         </TableRow>
@@ -75,7 +75,7 @@
             <EditText
                 android:inputType="phone"
                 android:ems="10"
-                android:id="@+id/editText3"
+                android:id="@+id/txtAddress2"
                 android:layout_column="1"
                 android:text="Bloomington, IL 61704" />
         </TableRow>
@@ -87,14 +87,14 @@
             <TextView
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Vehicle Details: "
-                android:id="@+id/textView"
+                android:id="@+id/lblVehicleDetails"
                 android:layout_column="0"
                 android:textColor="#ffffff" />
 
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText4"
+                android:id="@+id/txtVehicle"
                 android:layout_column="1"
                 android:text="2014 Dodge Ram" />
         </TableRow>
