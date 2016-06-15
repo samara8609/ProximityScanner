@@ -19,21 +19,6 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        nfcAdapter = NfcAdapter.getDefaultAdapter(this);
-
-        if(null == nfcAdapter) {
-            Toast.makeText(this, "This device doesn't support NFC.", Toast.LENGTH_LONG).show();
-            finish();
-            return;
-        }
-
-        if(!nfcAdapter.isEnabled()) {
-
-        } else {
-
-        }
-
-        handleIntent(getIntent());
     }
 
     @Override
@@ -45,9 +30,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
-        if(nfcAdapter != null) {
-            nfcAdapter.disableForegroundDispatch(this);
-        }
+
     }
 
     @Override
