@@ -34,5 +34,75 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"></TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Customer Details: "
+                android:id="@+id/lblDetails"
+                android:layout_column="0"
+                android:textColor="#ffffff" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:ems="10"
+                android:id="@+id/editText"
+                android:layout_column="1" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:inputType="textPostalAddress"
+                android:ems="10"
+                android:id="@+id/editText2"
+                android:layout_column="1"
+                android:text="123 W North St" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:inputType="phone"
+                android:ems="10"
+                android:id="@+id/editText3"
+                android:layout_column="1"
+                android:text="Bloomington, IL 61704" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Vehicle Details: "
+                android:id="@+id/textView"
+                android:layout_column="0"
+                android:textColor="#ffffff" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText4"
+                android:layout_column="1"
+                android:text="2014 Dodge Ram" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TableRow>
     </TableLayout>
 </LinearLayout>
