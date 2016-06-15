@@ -33,5 +33,5 @@ public class MockData {
     private String engine;
 
     private String quote;
-    
+
 }
