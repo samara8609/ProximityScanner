@@ -1,4 +1,4 @@
-package sf.hackday.proximityscanner;
+package sf.hackday.scanner.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
