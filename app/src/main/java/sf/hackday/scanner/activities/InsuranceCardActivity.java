@@ -12,6 +12,8 @@ import android.widget.Toast;
 import android.widget.TextView;
 import android.nfc.Tag;
 
+import sf.hackday.scanner.model.MockData;
+
 /**
  * Created by aaron on 6/15/16.
  */
@@ -73,16 +75,17 @@ public class InsuranceCardActivity extends Activity {
         String action = intent.getAction();
 
         TextView policy = (TextView) findViewById(R.id.txtPolicy);
+        TextView name = (TextView) findViewById(R.id.txtName);
 
         if(NfcAdapter.ACTION_TAG_DISCOVERED.equals(action)) {
-            String type = intent.getType();
-
 
             Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
 
+            MockData mockData = new MockData(tag.getId().toString());
 
+            policy.setText(mockData.policyId);
+            name.setText(mockData.customerName);
 
-            policy.setText(tag.getId().toString());
         }
 
 

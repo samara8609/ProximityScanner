@@ -1,4 +1,4 @@
-package sf.hackday.proximity.scanner.model;
+package sf.hackday.scanner.model;
 
 /**
  * Created by aaron on 6/15/16.
@@ -6,11 +6,11 @@ package sf.hackday.proximity.scanner.model;
 
 public class MockData {
 
-    private String policyId;
+    public String policyId;
 
     private String claimId;
 
-    private String customerName;
+    public String customerName;
 
     private String street;
 
@@ -34,4 +34,12 @@ public class MockData {
 
     private String quote;
 
+    public MockData (String id) {
+        policyId = "537 3616-F27-13A";
+        customerName = "Hall, Ivan & Michelle";
+        vin = "2GTEK63N451117733";
+        model="K1500";
+        make="GMC";
+        year="2005";
+    }
 }
