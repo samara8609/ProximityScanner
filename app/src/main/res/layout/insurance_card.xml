@@ -42,7 +42,7 @@
             <TextView
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Customer Details: "
-                android:id="@+id/lblDetails"
+                android:id="@+id/lblCustomerDetails"
                 android:layout_column="0"
                 android:textColor="#ffffff" />
 
@@ -87,7 +87,7 @@
             <TextView
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Vehicle Details: "
-                android:id="@+id/textView"
+                android:id="@+id/lblVehicleDetails"
                 android:layout_column="0"
                 android:textColor="#ffffff" />
 
