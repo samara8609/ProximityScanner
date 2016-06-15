@@ -1,12 +1,9 @@
 package sf.hackday.proximityscanner;
 
-import android.app.PendingIntent;
 import android.content.Intent;
-import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
-import android.widget.Button;
 
 
 public class MainActivity extends Activity {
@@ -24,7 +21,7 @@ public class MainActivity extends Activity {
 
         findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, VehicleCardActivity.class));
             }
         });
