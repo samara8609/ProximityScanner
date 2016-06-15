@@ -1,16 +1,18 @@
 package sf.hackday.proximityscanner;
 
+import android.app.PendingIntent;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.app.Activity;
 import android.view.Menu;
 import android.widget.Toast;
 import android.content.Intent;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     private NfcAdapter nfcAdapter;
+    private PendingIntent pendingIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +38,29 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if(nfcAdapter != null) {
+            nfcAdapter.disableForegroundDispatch(this);
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        this.handleIntent(intent);
+    }
+
 
     private void handleIntent(Intent intent) {
 
