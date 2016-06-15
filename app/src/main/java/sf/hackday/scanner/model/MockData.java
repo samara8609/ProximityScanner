@@ -8,15 +8,19 @@ public class MockData {
 
     public String policyId;
 
-    private String claimId;
+    public String agent;
+
+    public String effectiveDate;
+
+    public String claimId;
 
     public String customerName;
 
-    private String street;
+    public String street;
 
-    private String city;
+    public String city;
 
-    private String vin;
+    public String vin;
 
     private String year;
 
@@ -36,10 +40,14 @@ public class MockData {
 
     public MockData (String id) {
         policyId = "537 3616-F27-13A";
+        agent = "John Smith";
+        effectiveDate = "6/16/2016";
         customerName = "Hall, Ivan & Michelle";
         vin = "2GTEK63N451117733";
         model="K1500";
         make="GMC";
         year="2005";
+        street = "1 Boulder Dr.";
+        city = "Carlock, IL 61725";
     }
 }
