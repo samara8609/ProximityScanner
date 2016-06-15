@@ -5,12 +5,18 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.nfc.NfcAdapter;
+import android.nfc.tech.Ndef;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.widget.Toast;
 import android.widget.TextView;
 import android.nfc.Tag;
+
+import org.w3c.dom.Text;
+
+import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
 
 import sf.hackday.scanner.model.MockData;
 
@@ -74,20 +80,37 @@ public class InsuranceCardActivity extends Activity {
     private void handleIntent(Intent intent) {
         String action = intent.getAction();
 
-        TextView policy = (TextView) findViewById(R.id.txtPolicy);
-        TextView name = (TextView) findViewById(R.id.txtName);
-
         if(NfcAdapter.ACTION_TAG_DISCOVERED.equals(action)) {
 
             Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
 
             MockData mockData = new MockData(tag.getId().toString());
 
+            TextView policy = (TextView) findViewById(R.id.txtPolicy);
             policy.setText(mockData.policyId);
+
+            TextView agent = (TextView) findViewById(R.id.txtAgent);
+            agent.setText(mockData.agent);
+
+            TextView effectiveDate = (TextView) findViewById(R.id.txtDate);
+            effectiveDate.setText(mockData.effectiveDate);
+
+            TextView name = (TextView) findViewById(R.id.txtName);
             name.setText(mockData.customerName);
 
+            TextView address1 = (TextView) findViewById(R.id.txtAddress1);
+            address1.setText(mockData.street);
+
+            TextView address2 = (TextView) findViewById(R.id.txtAddress2);
+            address2.setText(mockData.city);
+
+            TextView vehicle = (TextView) findViewById(R.id.txtVehicle);
+            vehicle.setText(mockData.vin);
         }
 
+    }
 
+    private String bin2hex(byte[] data) {
+        return String.format("%0" + (data.length * 2) + "X", new BigInteger(1, data));
     }
 }
