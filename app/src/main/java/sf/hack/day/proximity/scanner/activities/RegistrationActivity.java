@@ -16,7 +16,7 @@ public class RegistrationActivity extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.insurance_card);
+        setContentView(R.layout.registration);
 
         nfcAdapter = NfcAdapter.getDefaultAdapter(this);
 
