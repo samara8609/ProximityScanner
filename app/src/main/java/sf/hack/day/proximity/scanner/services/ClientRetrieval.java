@@ -44,8 +44,8 @@ public final class ClientRetrieval {
     private static Person createAmber() {
         Person person = new Person();
         Name name = new Name();
-        name.first = "Ivan";
-        name.last = "Hall";
+        name.first = "Amber";
+        name.last = "Wyatt";
         person.name = name;
 
         Address address = new Address();

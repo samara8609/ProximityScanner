@@ -65,6 +65,11 @@ public class RegistrationActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onNewIntent(Intent intent) {
+        this.handleIntent(intent);
+    }
+
     private void handleIntent(Intent intent) {
         String action = intent.getAction();
 
@@ -75,7 +80,12 @@ public class RegistrationActivity extends AppCompatActivity {
             Person person = ClientRetrieval.retrieve(Converter.bytesToHex(tag.getId()));
 
             if(null != person) {
-                TextView txtFirstName = (TextView) findViewById(R.id.txt)
+                TextView txtFirstName = (TextView) findViewById(R.id.txtFName);
+                txtFirstName.setText(person.name.first);
+
+                TextView txtLastName = (TextView) findViewById(R.id.txtLName);
+                txtLastName.setText(person.name.last);
+
             } else {
                 Toast.makeText(this, "No policies were able to be retrieved.", Toast.LENGTH_LONG).show();
             }
