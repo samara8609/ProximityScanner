@@ -119,8 +119,32 @@ public class AutoQuoteActivity  extends AppCompatActivity  implements OnItemSele
             Vehicle vehicle = VehicleRetrieval.retrieve(Converter.bytesToHex(tag.getId()));
 
             if(null != vehicle) {
+                TextView vinText = (TextView) findViewById(R.id.txtVin);
+                vinText.setText(vehicle.vin);
+
+                TextView txtYear = (TextView) findViewById(R.id.txtYear);
+                txtYear.setText(vehicle.year);
+
+                TextView txtMake = (TextView) findViewById(R.id.txtMake);
+                txtMake.setText(vehicle.make);
+
+                TextView txtModel = (TextView) findViewById(R.id.txtModel);
+                txtModel.setText(vehicle.make);
+
+                TextView txtColor = (TextView) findViewById(R.id.txtColor);
+                txtColor.setText(vehicle.color);
+
+                TextView txtTrim = (TextView) findViewById(R.id.txtTrim);
+                txtTrim.setText(vehicle.trim);
+
+                TextView txtBodyType = (TextView) findViewById(R.id.txtBody);
+                txtBodyType.setText(vehicle.bodyType);
+
+                TextView txtEngine = (TextView) findViewById(R.id.txtEngine);
+                txtEngine.setText(vehicle.engine);
 
                 spinner.setVisibility(View.VISIBLE);
+                quoteBtn.setVisibility(View.VISIBLE);
             } else {
                 Toast.makeText(this, "No policies were able to be retrieved.", Toast.LENGTH_LONG).show();
             }
