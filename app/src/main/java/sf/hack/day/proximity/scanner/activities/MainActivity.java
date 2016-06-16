@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void vehicleCardClick(View view) {
-        startActivity(new Intent(MainActivity.this, InsuranceCardActivity.class));
+        startActivity(new Intent(MainActivity.this, VehicleCardActivity.class));
     }
 
     public void autoQuoteClick(View view) {
