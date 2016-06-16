@@ -30,12 +30,6 @@
             <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity" />
         </activity>
 
-        <activity android:name=".VehicleCardActivity"
-            android:label="@string/vehicle_label"
-            android:parentActivityName=".MainActivity">
-            <meta-data android:name="android.support.PARENT_ACTIVITY" android:value=".MainActivity" />
-        </activity>
-
         <activity android:name=".AutoQuoteActivity"
             android:label="Auto Quote"
             android:parentActivityName=".MainActivity">
