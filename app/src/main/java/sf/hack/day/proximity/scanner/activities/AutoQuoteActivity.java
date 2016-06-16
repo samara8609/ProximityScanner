@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * Created by samar on 6/15/2016.
  */
-public class AutoQuoteActivity  extends AppCompatActivity{
+public class AutoQuoteActivity  extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +23,9 @@ public class AutoQuoteActivity  extends AppCompatActivity{
         // Spinner element
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
 
-
+        // Spinner click listener
+        spinner.setOnItemSelectedListener(this);
+        
         // Spinner Drop down elements
         List<String> categories = new ArrayList<String>();
         categories.add("25/50 Coverage");
