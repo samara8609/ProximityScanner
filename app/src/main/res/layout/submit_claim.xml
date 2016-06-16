@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ff0000"
     android:weightSum="1">
 
     <TableLayout
@@ -25,16 +25,14 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Policy #:  "
-                        android:id="@+id/textView18"
-                        android:textColor="#ffffff" />
+                        android:id="@+id/textView18" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="......"
-                        android:id="@+id/textView20"
-                        android:textColor="#000000" />
+                        android:id="@+id/textView20"/>
                 </TableRow>
 
                 <TableRow
@@ -46,8 +44,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Agent: "
-                        android:id="@+id/textView21"
-                        android:textColor="#ffffff" />
+                        android:id="@+id/textView21" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -66,8 +63,7 @@
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Effective Date: "
-                        android:id="@+id/textView23"
-                        android:textColor="#ffffff" />
+                        android:id="@+id/textView23" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -86,7 +82,6 @@
                         android:text="Customer Details: "
                         android:id="@+id/textView25"
                         android:layout_column="0"
-                        android:textColor="#ffffff"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
@@ -133,7 +128,6 @@
                         android:text="Vehicle Details: "
                         android:id="@+id/textView26"
                         android:layout_column="0"
-                        android:textColor="#ffffff"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
