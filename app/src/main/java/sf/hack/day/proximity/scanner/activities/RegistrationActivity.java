@@ -96,6 +96,11 @@ public class RegistrationActivity extends AppCompatActivity {
                 TextView txtCity = (TextView) findViewById(R.id.txtCity);
                 txtCity.setText(address.city);
 
+                TextView txtState = (TextView) findViewById(R.id.txtState);
+                txtState.setText(address.state);
+
+                TextView txtZip = (TextView) findViewById(R.id.txtZip);
+                txtZip.setText(address.zip);
             } else {
                 Toast.makeText(this, "No policies were able to be retrieved.", Toast.LENGTH_LONG).show();
             }
