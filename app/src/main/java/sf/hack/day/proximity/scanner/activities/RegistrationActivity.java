@@ -98,6 +98,9 @@ public class RegistrationActivity extends AppCompatActivity {
                 TextView txtZip = (TextView) findViewById(R.id.txtZip);
                 txtZip.setText(address.zip);
 
+                TextView txtEmail = (TextView) findViewById(R.id.txtEmail);
+                txtEmail.setText(person.email);
+
                 findViewById(R.id.button6).setVisibility(View.VISIBLE);
             } else {
                 Toast.makeText(this, "No policies were able to be retrieved.", Toast.LENGTH_LONG).show();

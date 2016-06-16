@@ -38,6 +38,8 @@ public final class ClientRetrieval {
         address.zip = "61725";
         person.address = address;
 
+        person.email = "ivan.hall@gmail.com";
+
         return person;
     }
 
@@ -55,6 +57,7 @@ public final class ClientRetrieval {
         address.zip = "61703";
         person.address = address;
 
+        person.email = "amber.wyatt@statefarm.com";
         return person;
 
     }
