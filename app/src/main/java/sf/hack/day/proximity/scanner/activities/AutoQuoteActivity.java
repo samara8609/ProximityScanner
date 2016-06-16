@@ -18,14 +18,14 @@ public class AutoQuoteActivity  extends AppCompatActivity implements AdapterView
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+        setContentView(R.layout.auto_quote);
 
         // Spinner element
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
 
         // Spinner click listener
         spinner.setOnItemSelectedListener(this);
-        
+
         // Spinner Drop down elements
         List<String> categories = new ArrayList<String>();
         categories.add("25/50 Coverage");
