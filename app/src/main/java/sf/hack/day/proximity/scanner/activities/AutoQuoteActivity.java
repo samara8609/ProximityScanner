@@ -41,6 +41,9 @@ public class AutoQuoteActivity  extends AppCompatActivity  implements OnItemSele
     private Button quoteBtn;
     private TextView quoteTxt;
 
+    private String selectedItem;
+    private String UUID;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,7 +64,6 @@ public class AutoQuoteActivity  extends AppCompatActivity  implements OnItemSele
 
         // Spinner click listener
         spinner.setOnItemSelectedListener(this);
-        spinner.setPrompt("Coverage Options");
 
         // Spinner Drop down elements
         List<String> categories = new ArrayList<String>();
@@ -117,7 +119,9 @@ public class AutoQuoteActivity  extends AppCompatActivity  implements OnItemSele
 
             Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
 
-            Vehicle vehicle = VehicleRetrieval.retrieve(Converter.bytesToHex(tag.getId()));
+            UUID = Converter.bytesToHex(tag.getId());
+
+            Vehicle vehicle = VehicleRetrieval.retrieve(UUID);
 
             if(null != vehicle) {
                 TextView vinText = (TextView) findViewById(R.id.txtVin);
@@ -154,13 +158,14 @@ public class AutoQuoteActivity  extends AppCompatActivity  implements OnItemSele
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        // On selecting a spinner item
-        String item = parent.getItemAtPosition(position).toString();
-
-        // Showing selected spinner item
-        Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
+        selectedItem = parent.getItemAtPosition(position).toString();
     }
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
+    }
+
+    public void getQuote(View view) {
+        quoteTxt.setText("Quote: $" + String.valueOf(QuoteRetrieval.retrieve(UUID, selectedItem)));
+        quoteTxt.setVisibility(View.VISIBLE);
     }
 }

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="sf.hack.day.proximity.scanner.activities.AutoQuoteActivity"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
 
     android:weightSum="1">
@@ -196,7 +199,8 @@
             android:layout_height="wrap_content"
             android:text="Get Quote"
             android:id="@+id/btnQuote"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            android:onClick="getQuote"/>
     </LinearLayout>
 
     <LinearLayout
