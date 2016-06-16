@@ -15,6 +15,7 @@ import android.nfc.Tag;
 import sf.hack.day.proximity.scanner.model.Address;
 import sf.hack.day.proximity.scanner.model.Policy;
 import sf.hack.day.proximity.scanner.services.PolicyRetrieval;
+import sf.hack.day.proximity.scanner.utilities.Converter;
 
 /**
  * Created by aaron on 6/15/16.
@@ -80,43 +81,36 @@ public class InsuranceCardActivity extends Activity {
 
             Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
 
-            Policy policy = PolicyRetrieval.retrievePolicy(bytesToHex(tag.getId()));
+            Policy policy = PolicyRetrieval.retrievePolicy(Converter.bytesToHex(tag.getId()));
 
-            TextView policyText = (TextView) findViewById(R.id.txtPolicy);
-            policyText.setText(policy.id);
+            if(null != policy) {
+                TextView policyText = (TextView) findViewById(R.id.txtPolicy);
+                policyText.setText(policy.id);
 
-            TextView agentText = (TextView) findViewById(R.id.txtAgent);
-            agentText.setText(policy.agent);
+                TextView agentText = (TextView) findViewById(R.id.txtAgent);
+                agentText.setText(policy.agent);
 
-            TextView effectiveDateText = (TextView) findViewById(R.id.txtDate);
-            effectiveDateText.setText(policy.effectiveDate);
+                TextView effectiveDateText = (TextView) findViewById(R.id.txtDate);
+                effectiveDateText.setText(policy.effectiveDate);
 
-            TextView nameText = (TextView) findViewById(R.id.txtName);
-            nameText.setText(policy.customerName);
+                TextView nameText = (TextView) findViewById(R.id.txtName);
+                nameText.setText(policy.customerName);
 
-            Address address = policy.address;
-            TextView address1 = (TextView) findViewById(R.id.txtAddress1);
-            address1.setText(address.address1);
+                Address address = policy.address;
+                TextView address1 = (TextView) findViewById(R.id.txtAddress1);
+                address1.setText(address.address1);
 
-            TextView address2 = (TextView) findViewById(R.id.txtAddress2);
-            address2.setText(address.city + ", " + address.state + " " + address.zip);
+                TextView address2 = (TextView) findViewById(R.id.txtAddress2);
+                address2.setText(address.city + ", " + address.state + " " + address.zip);
 
-            TextView vehicleText = (TextView) findViewById(R.id.txtVehicle);
-            vehicleText.setText(policy.vehicle.vin);
+                TextView vehicleText = (TextView) findViewById(R.id.txtVehicle);
+                vehicleText.setText(policy.vehicle.vin);
+            } else {
+                Toast.makeText(this, "No policies were able to be retrieved.", Toast.LENGTH_LONG).show();
+            }
         }
-
     }
 
-    public static String bytesToHex(byte[] bytes) {
-        final char[] hexArray = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
-        char[] hexChars = new char[bytes.length * 2];
-        int v;
-        for ( int j = 0; j < bytes.length; j++ ) {
-            v = bytes[j] & 0xFF;
-            hexChars[j * 2] = hexArray[v >>> 4];
-            hexChars[j * 2 + 1] = hexArray[v & 0x0F];
-        }
-        return new String(hexChars);
-    }
+
 
 }
