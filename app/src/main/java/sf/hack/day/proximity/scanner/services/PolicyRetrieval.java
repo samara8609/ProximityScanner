@@ -28,7 +28,7 @@ public final class PolicyRetrieval {
         policy.id = "537 3616-F27-13A";
         policy.customerName = "Hall, Ivan & Michelle";
         policy.agent = "John Smith";
-        policy.effectiveDate = "6/16/2016";
+        policy.effectiveDate = "6/15/2016 to 12/15/2016";
 
         Address address = new Address();
         address.address1 = "1 Boulder Dr.";
@@ -49,10 +49,10 @@ public final class PolicyRetrieval {
 
     private static Policy createAmber() {
         Policy policy = new Policy();
-        policy.id = "537 3616-F27-13A";
+        policy.id = "123 4567-F27-13A";
         policy.customerName = "Wyatt, Mike & Amber L";
         policy.agent = "John Smith";
-        policy.effectiveDate = "6/16/2016";
+        policy.effectiveDate = "1/15/2016 to 6/15/2016";
 
         Address address = new Address();
         address.address1 = "1 Boulder Dr.";
