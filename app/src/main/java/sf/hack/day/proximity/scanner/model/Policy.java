@@ -15,4 +15,6 @@ public class Policy {
     public String customerName;
 
     public Address address;
+
+    public Vehicle vehicle;
 }
