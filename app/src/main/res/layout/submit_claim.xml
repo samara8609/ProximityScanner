@@ -81,20 +81,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" >
 
-                    <EditText
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPersonName"
-                        android:text="......"
-                        android:ems="10"
-                        android:id="@+id/editText"
-                        android:layout_column="1" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-
                     <TextView
                         android:textAppearance="?android:attr/textAppearanceLarge"
                         android:text="Customer Details: "
@@ -104,28 +90,38 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
-                    <EditText
-                        android:inputType="textPostalAddress"
-                        android:ems="10"
-                        android:id="@+id/editText2"
-                        android:layout_column="1"
-                        android:text="......"
+                    <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="......"
+                        android:id="@+id/txtName" />
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" >
 
-                    <EditText
-                        android:inputType="phone"
-                        android:ems="10"
-                        android:id="@+id/editText3"
-                        android:layout_column="1"
-                        android:text="......"
+                    <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="......"
+                        android:id="@+id/txtAddress1"
+                        android:layout_column="1" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="......"
+                        android:id="@+id/txtAddress2"
+                        android:layout_column="1" />
                 </TableRow>
 
                 <TableRow
@@ -141,12 +137,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
-                    <EditText
-                        android:id="@+id/editText4"
-                        android:layout_column="1"
-                        android:text="......"
+                    <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="......"
+                        android:id="@+id/txtVehicle1"
+                        android:layout_column="1" />
                 </TableRow>
 
                 <TableRow
@@ -156,6 +153,14 @@
                     <Space
                         android:layout_width="20px"
                         android:layout_height="400px" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="......"
+                        android:id="@+id/txtVehicle2"
+                        android:layout_column="1" />
                 </TableRow>
 
             </TableLayout>
@@ -171,7 +176,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="Claim 12-000M-001 has been submitted."
-                android:id="@+id/textView27" />
+                android:id="@+id/txtClaimSubmission" />
         </TableRow>
 
         <TableRow
