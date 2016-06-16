@@ -10,6 +10,8 @@ import android.view.Menu;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import sf.hack.day.proximity.scanner.model.Address;
 import sf.hack.day.proximity.scanner.model.Policy;
 import sf.hack.day.proximity.scanner.model.Vehicle;
@@ -85,6 +87,14 @@ public class RegistrationActivity extends AppCompatActivity {
 
                 TextView txtLastName = (TextView) findViewById(R.id.txtLName);
                 txtLastName.setText(person.name.last);
+
+                Address address = person.address;
+
+                TextView txtAddressLine1 = (TextView) findViewById(R.id.txtAddress1);
+                txtAddressLine1.setText(address.address1);
+
+                TextView txtCity = (TextView) findViewById(R.id.txtCity);
+                txtCity.setText(address.city);
 
             } else {
                 Toast.makeText(this, "No policies were able to be retrieved.", Toast.LENGTH_LONG).show();
