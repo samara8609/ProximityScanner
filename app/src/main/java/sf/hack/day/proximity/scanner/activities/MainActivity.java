@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
     public void autoQuoteClick(View view) {
         startActivity(new Intent(MainActivity.this, AutoQuoteActivity.class));
     }
+    public void submitClaimClick(View view) {
+        startActivity(new Intent(MainActivity.this, SubmitClaimActivity.class));
+    }
 
     public void registrationClick(View view) {
         startActivity(new Intent(MainActivity.this, RegistrationActivity.class));
