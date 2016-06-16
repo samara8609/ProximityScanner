@@ -129,7 +129,7 @@ public class AutoQuoteActivity  extends AppCompatActivity  implements OnItemSele
                 txtMake.setText(vehicle.make);
 
                 TextView txtModel = (TextView) findViewById(R.id.txtModel);
-                txtModel.setText(vehicle.make);
+                txtModel.setText(vehicle.model);
 
                 TextView txtColor = (TextView) findViewById(R.id.txtColor);
                 txtColor.setText(vehicle.color);
