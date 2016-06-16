@@ -7,8 +7,7 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1.01">
+        android:layout_height="wrap_content">
 
         <TableRow
             android:layout_width="match_parent"
@@ -31,8 +30,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="......"
-                        android:id="@+id/textView20"/>
+                        android:id="@+id/txtPolicy"/>
                 </TableRow>
 
                 <TableRow
@@ -50,8 +48,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="......"
-                        android:id="@+id/textView22" />
+                        android:id="@+id/txtAgent" />
                 </TableRow>
 
                 <TableRow
@@ -69,8 +66,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="......"
-                        android:id="@+id/textView24" />
+                        android:id="@+id/txtEffective" />
                 </TableRow>
 
                 <TableRow
@@ -89,7 +85,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="......"
                         android:id="@+id/txtName" />
                 </TableRow>
 
@@ -101,7 +96,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="......"
                         android:id="@+id/txtAddress1"
                         android:layout_column="1" />
                 </TableRow>
@@ -114,7 +108,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="......"
                         android:id="@+id/txtAddress2"
                         android:layout_column="1" />
                 </TableRow>
@@ -135,7 +128,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="......"
                         android:id="@+id/txtVehicle1"
                         android:layout_column="1" />
                 </TableRow>
@@ -152,7 +144,6 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:text="......"
                         android:id="@+id/txtVehicle2"
                         android:layout_column="1" />
                 </TableRow>
@@ -161,27 +152,29 @@
 
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="Claim 12-000M-001 has been submitted."
-                android:id="@+id/txtClaimSubmission" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Submit Claim"
-                android:id="@+id/button5" />
-        </TableRow>
     </TableLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/txtClaimSubmission" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit Claim"
+            android:id="@+id/button5" />
+    </LinearLayout>
 </LinearLayout>
