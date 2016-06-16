@@ -37,7 +37,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Auto Quote"
-            android:id="@+id/button4"
-            android:onClick="autoQuoteClick"/>
+            android:id="@+id/autoQuoteBtn"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registration"
+            android:onClick="registrationClick" />
+
     </LinearLayout>
 </LinearLayout>
