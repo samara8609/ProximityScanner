@@ -1,12 +1,12 @@
 package sf.hack.day.proximity.scanner.activities;
 
-import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.nfc.NfcAdapter;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.widget.Toast;
 import android.widget.TextView;
@@ -22,7 +22,7 @@ import sf.hack.day.proximity.scanner.utilities.Converter;
  * Created by aaron on 6/15/16.
  */
 
-public class InsuranceCardActivity extends Activity {
+public class InsuranceCardActivity extends AppCompatActivity {
 
     private NfcAdapter adapter;
     private SharedPreferences preferences;

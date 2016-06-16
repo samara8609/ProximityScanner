@@ -1,6 +1,7 @@
 package sf.hack.day.proximity.scanner.activities;
 
 import android.app.Activity;
+import android.nfc.NfcAdapter;
 import android.os.Bundle;
 
 /**
@@ -8,6 +9,8 @@ import android.os.Bundle;
  */
 
 public class VehicleCardActivity extends Activity {
+
+    private NfcAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
