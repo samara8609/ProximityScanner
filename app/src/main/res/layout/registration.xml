@@ -63,7 +63,7 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="220dp">
+        android:layout_height="260dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -215,7 +215,8 @@
             android:layout_height="wrap_content"
             android:text="Register"
             android:id="@+id/button6"
-            android:visibility="invisible" />
+            android:visibility="invisible"
+            android:onClick="register"/>
     </LinearLayout>
 
     <LinearLayout
@@ -228,7 +229,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Registration Complete, Please Check Registered Email."
-            android:id="@+id/txtRegistrationComplete" />
+            android:id="@+id/txtRegistrationComplete"
+            android:visibility="invisible"/>
     </LinearLayout>
 
 </LinearLayout>

@@ -7,17 +7,13 @@ import android.nfc.Tag;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
 import sf.hack.day.proximity.scanner.model.Address;
-import sf.hack.day.proximity.scanner.model.Policy;
-import sf.hack.day.proximity.scanner.model.Vehicle;
 import sf.hack.day.proximity.scanner.model.Person;
 import sf.hack.day.proximity.scanner.services.ClientRetrieval;
-import sf.hack.day.proximity.scanner.services.PolicyRetrieval;
 import sf.hack.day.proximity.scanner.utilities.Converter;
 
 /**
@@ -101,9 +97,15 @@ public class RegistrationActivity extends AppCompatActivity {
 
                 TextView txtZip = (TextView) findViewById(R.id.txtZip);
                 txtZip.setText(address.zip);
+
+                findViewById(R.id.button6).setVisibility(View.VISIBLE);
             } else {
                 Toast.makeText(this, "No policies were able to be retrieved.", Toast.LENGTH_LONG).show();
             }
         }
+    }
+
+    public void register(View view) {
+        findViewById(R.id.txtRegistrationComplete).setVisibility(View.VISIBLE);
     }
 }
