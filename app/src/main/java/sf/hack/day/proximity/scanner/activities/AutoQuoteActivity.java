@@ -61,6 +61,7 @@ public class AutoQuoteActivity  extends AppCompatActivity  implements OnItemSele
 
         // Spinner click listener
         spinner.setOnItemSelectedListener(this);
+        spinner.setPrompt("Coverage Options");
 
         // Spinner Drop down elements
         List<String> categories = new ArrayList<String>();
