@@ -28,14 +28,14 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Auto Quote"
-            android:onClick="autoQuoteClick" />
+            android:text="Registration"
+            android:onClick="registrationClick" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Registration"
-            android:onClick="registrationClick" />
+            android:text="Auto Quote"
+            android:onClick="autoQuoteClick" />
 
     </LinearLayout>
 </LinearLayout>
