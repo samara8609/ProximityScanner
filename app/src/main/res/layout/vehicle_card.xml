@@ -18,6 +18,13 @@
                 android:text="VIN: "
                 android:id="@+id/textView"
                 android:layout_column="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/txtVin"
+                android:layout_column="1" />
         </TableRow>
 
         <TableRow
@@ -29,6 +36,13 @@
                 android:text="Year: "
                 android:id="@+id/textView2"
                 android:layout_column="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/txtYear"
+                android:layout_column="1" />
         </TableRow>
 
         <TableRow
@@ -40,6 +54,14 @@
                 android:text="Make: "
                 android:id="@+id/textView3"
                 android:layout_column="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text=" "
+                android:id="@+id/txtMake"
+                android:layout_column="1" />
         </TableRow>
 
         <TableRow
@@ -51,6 +73,13 @@
                 android:text="Model: "
                 android:id="@+id/textView4"
                 android:layout_column="0" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/txtModel"
+                android:layout_column="1" />
         </TableRow>
 
         <TableRow
@@ -62,6 +91,13 @@
                 android:text="Color: "
                 android:id="@+id/textView5"
                 android:layout_column="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/txtColor"
+                android:layout_column="1" />
         </TableRow>
 
         <TableRow
@@ -73,6 +109,13 @@
                 android:text="Trim: "
                 android:id="@+id/textView6"
                 android:layout_column="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/txtTrim"
+                android:layout_column="1" />
         </TableRow>
 
         <TableRow
@@ -84,6 +127,13 @@
                 android:text="Body Type: "
                 android:id="@+id/textView7"
                 android:layout_column="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/txtBody"
+                android:layout_column="1" />
         </TableRow>
 
         <TableRow
@@ -95,6 +145,13 @@
                 android:text="Engine: "
                 android:id="@+id/textView8"
                 android:layout_column="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/txtEngine"
+                android:layout_column="1" />
         </TableRow>
     </TableLayout>
 </LinearLayout>
