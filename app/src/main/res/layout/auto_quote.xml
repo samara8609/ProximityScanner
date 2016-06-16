@@ -181,7 +181,9 @@
             android:layout_height="wrap_content"
             android:id="@+id/spinner"
             android:prompt="@string/spinner_title"
-            android:visibility="invisible"/>
+            android:visibility="invisible"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center" />
     </LinearLayout>
 
     <LinearLayout
