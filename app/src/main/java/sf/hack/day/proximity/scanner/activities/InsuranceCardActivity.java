@@ -14,6 +14,7 @@ import android.nfc.Tag;
 
 import sf.hack.day.proximity.scanner.model.Address;
 import sf.hack.day.proximity.scanner.model.Policy;
+import sf.hack.day.proximity.scanner.model.Vehicle;
 import sf.hack.day.proximity.scanner.services.PolicyRetrieval;
 import sf.hack.day.proximity.scanner.utilities.Converter;
 
@@ -103,8 +104,12 @@ public class InsuranceCardActivity extends Activity {
                 TextView address2 = (TextView) findViewById(R.id.txtAddress2);
                 address2.setText(address.city + ", " + address.state + " " + address.zip);
 
-                TextView vehicleText = (TextView) findViewById(R.id.txtVehicle);
-                vehicleText.setText(policy.vehicle.vin);
+                Vehicle vehicle = policy.vehicle;
+                TextView vehicleText1 = (TextView) findViewById(R.id.txtVehicle1);
+                vehicleText1.setText(vehicle.vin);
+
+                TextView vehicleText2 = (TextView) findViewById(R.id.txtVehicle2);
+                vehicleText2.setText(vehicle.year + " " + vehicle.make + " " + vehicle.model);
             } else {
                 Toast.makeText(this, "No policies were able to be retrieved.", Toast.LENGTH_LONG).show();
             }
