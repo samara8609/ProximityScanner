@@ -12,9 +12,12 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +26,8 @@ import sf.hack.day.proximity.scanner.model.Address;
 import sf.hack.day.proximity.scanner.model.Policy;
 import sf.hack.day.proximity.scanner.model.Vehicle;
 import sf.hack.day.proximity.scanner.services.PolicyRetrieval;
+import sf.hack.day.proximity.scanner.services.QuoteRetrieval;
+import sf.hack.day.proximity.scanner.services.VehicleRetrieval;
 import sf.hack.day.proximity.scanner.utilities.Converter;
 
 
@@ -32,6 +37,9 @@ import sf.hack.day.proximity.scanner.utilities.Converter;
 public class AutoQuoteActivity  extends AppCompatActivity  implements OnItemSelectedListener{
 
     private NfcAdapter nfcAdapter;
+    private Spinner spinner;
+    private Button quoteBtn;
+    private TextView quoteTxt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,8 +53,11 @@ public class AutoQuoteActivity  extends AppCompatActivity  implements OnItemSele
             return;
         }
 
+        quoteBtn = (Button) findViewById(R.id.btnQuote);
+        quoteTxt = (TextView) findViewById(R.id.txtQuote);
+
         // Spinner element
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        spinner = (Spinner) findViewById(R.id.spinner);
 
         // Spinner click listener
         spinner.setOnItemSelectedListener(this);
@@ -105,34 +116,11 @@ public class AutoQuoteActivity  extends AppCompatActivity  implements OnItemSele
 
             Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
 
-            Policy policy = PolicyRetrieval.retrievePolicy(Converter.bytesToHex(tag.getId()));
+            Vehicle vehicle = VehicleRetrieval.retrieve(Converter.bytesToHex(tag.getId()));
 
-            if(null != policy) {
-                TextView policyText = (TextView) findViewById(R.id.txtPolicy);
-                policyText.setText(policy.id);
+            if(null != vehicle) {
 
-                TextView agentText = (TextView) findViewById(R.id.txtAgent);
-                agentText.setText(policy.agent);
-
-                TextView effectiveDateText = (TextView) findViewById(R.id.txtDate);
-                effectiveDateText.setText(policy.effectiveDate);
-
-                TextView nameText = (TextView) findViewById(R.id.txtName);
-                nameText.setText(policy.customerName);
-
-                Address address = policy.address;
-                TextView address1 = (TextView) findViewById(R.id.txtAddress1);
-                address1.setText(address.address1);
-
-                TextView address2 = (TextView) findViewById(R.id.txtAddress2);
-                address2.setText(address.city + ", " + address.state + " " + address.zip);
-
-                Vehicle vehicle = policy.vehicle;
-                TextView vehicleText1 = (TextView) findViewById(R.id.txtVehicle1);
-                vehicleText1.setText(vehicle.vin);
-
-                TextView vehicleText2 = (TextView) findViewById(R.id.txtVehicle2);
-                vehicleText2.setText(vehicle.year + " " + vehicle.make + " " + vehicle.model);
+                spinner.setVisibility(View.VISIBLE);
             } else {
                 Toast.makeText(this, "No policies were able to be retrieved.", Toast.LENGTH_LONG).show();
             }
