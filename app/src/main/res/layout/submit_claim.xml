@@ -29,7 +29,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:id="@+id/txtPolicy"/>
                 </TableRow>
 
@@ -47,7 +47,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:id="@+id/txtAgent" />
                 </TableRow>
 
@@ -65,7 +65,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:id="@+id/txtDate" />
                 </TableRow>
 
@@ -84,7 +84,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:id="@+id/txtName" />
                 </TableRow>
 
@@ -95,7 +95,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:id="@+id/txtAddress1"
                         android:layout_column="1" />
                 </TableRow>
@@ -107,7 +107,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:id="@+id/txtAddress2"
                         android:layout_column="1" />
                 </TableRow>
@@ -127,7 +127,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:id="@+id/txtVehicle1"
                         android:layout_column="1" />
                 </TableRow>
@@ -143,7 +143,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
                         android:id="@+id/txtVehicle2"
                         android:layout_column="1" />
                 </TableRow>
