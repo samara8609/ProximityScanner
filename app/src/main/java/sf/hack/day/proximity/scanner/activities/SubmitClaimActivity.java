@@ -4,13 +4,15 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.nfc.NfcAdapter;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
-import android.nfc.Tag;
+import android.widget.Toast;
 
 import sf.hack.day.proximity.scanner.model.Address;
 import sf.hack.day.proximity.scanner.model.Policy;
@@ -19,18 +21,18 @@ import sf.hack.day.proximity.scanner.services.PolicyRetrieval;
 import sf.hack.day.proximity.scanner.utilities.Converter;
 
 /**
- * Created by aaron on 6/15/16.
+ * Created by samar on 6/16/2016.
  */
-
-public class InsuranceCardActivity extends AppCompatActivity {
-
+public class SubmitClaimActivity extends AppCompatActivity {
     private NfcAdapter adapter;
     private SharedPreferences preferences;
+    private Button submitBtn;
+    private TextView claimTxt;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.insurance_card);
+        setContentView(R.layout.submit_claim);
 
         adapter = NfcAdapter.getDefaultAdapter(this);
 
@@ -39,6 +41,9 @@ public class InsuranceCardActivity extends AppCompatActivity {
             finish();
             return;
         }
+
+        submitBtn = (Button) findViewById(R.id.btnSubmit);
+        claimTxt = (TextView) findViewById(R.id.txtClaimSubmission);
 
         preferences = PreferenceManager.getDefaultSharedPreferences(this);
 
@@ -111,6 +116,8 @@ public class InsuranceCardActivity extends AppCompatActivity {
                 TextView vehicleText2 = (TextView) findViewById(R.id.txtVehicle2);
                 vehicleText2.setText(vehicle.year + " " + vehicle.make + " " + vehicle.model);
 
+                submitBtn.setVisibility(View.VISIBLE);
+
 
             } else {
                 Toast.makeText(this, "No policies were able to be retrieved.", Toast.LENGTH_LONG).show();
@@ -118,6 +125,8 @@ public class InsuranceCardActivity extends AppCompatActivity {
         }
     }
 
-
-
+    public void submitClaim(View view) {
+        claimTxt.setText("Claim 13-000M-001 has been created.");
+        claimTxt.setVisibility(View.VISIBLE);
+    }
 }
