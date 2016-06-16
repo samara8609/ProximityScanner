@@ -1,11 +1,10 @@
-package sf.hackday.scanner.activities;
+package sf.hack.day.proximity.scanner.activities;
 
 import android.app.Activity;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.nfc.NfcAdapter;
-import android.nfc.tech.Ndef;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.Menu;
@@ -13,12 +12,9 @@ import android.widget.Toast;
 import android.widget.TextView;
 import android.nfc.Tag;
 
-import org.w3c.dom.Text;
-
 import java.math.BigInteger;
-import java.nio.charset.StandardCharsets;
 
-import sf.hackday.scanner.model.MockData;
+import sf.hack.day.proximity.scanner.model.MockData;
 
 /**
  * Created by aaron on 6/15/16.
@@ -110,7 +106,4 @@ public class InsuranceCardActivity extends Activity {
 
     }
 
-    private String bin2hex(byte[] data) {
-        return String.format("%0" + (data.length * 2) + "X", new BigInteger(1, data));
-    }
 }
