@@ -1,6 +1,5 @@
 package sf.hack.day.proximity.scanner.services;
 
-import sf.hack.day.proximity.scanner.model.Quote;
 /**
  * Created by aaron on 6/16/16.
  */
