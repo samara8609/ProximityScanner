@@ -117,7 +117,4 @@ public class InsuranceCardActivity extends AppCompatActivity {
             }
         }
     }
-
-
-
 }
