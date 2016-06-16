@@ -1,4 +1,4 @@
-package sf.hackday.scanner.model;
+package sf.hack.day.proximity.scanner.model;
 
 /**
  * Created by aaron on 6/15/16.
